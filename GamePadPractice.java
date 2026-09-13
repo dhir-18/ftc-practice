@@ -15,6 +15,8 @@ public class GamePadPractice extends OpMode {
     public void loop() {
         // runs 50x a second
 
+        // stick y-axis is inverted (up = negative) on FTC gamepads, so negate it;
+        // divide by 2 to cap forward speed at half power
         double speedForward = -gamepad1.left_stick_y / 2.0;
         double difference = gamepad1.left_stick_x - gamepad1.right_stick_x;
 
