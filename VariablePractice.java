@@ -7,10 +7,11 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 public class VariablePractice extends OpMode {
     @Override
     public void init() {
-        int teamNumber = 23014;
-        double motorSpeed = 0.75;
-        boolean clawClosed = true;
-        String teamName = "Wilsonic Boom";
+        // one example of each basic Java type, just to practice declaring/displaying them
+        int teamNumber = 23014;       // whole numbers
+        double motorSpeed = 0.75;     // decimal numbers (motor power is always -1.0 to 1.0)
+        boolean clawClosed = true;    // true/false
+        String teamName = "Wilsonic Boom"; // text
 
         telemetry.addData("Team Number", teamNumber);
         telemetry.addData("motor speed", motorSpeed);
