@@ -16,6 +16,9 @@ Java practice programs for FTC (FIRST Tech Challenge) robotics, written against 
 | `touchSensorPractice.java` | `OpMode` that uses `TestBench` to read and display the touch sensor's state via telemetry — demonstrates composing an OpMode from a separate hardware-wrapper class. |
 | `RobotLocationPractice.java` | Plain class modeling robot position/heading: stores an angle and x-position, with a `getHeading()` method that normalizes the angle to the -180°..180° range, plus setters/getters and methods to incrementally turn or move. |
 | `UseRobotLocation.java` | `OpMode` that drives a `RobotLocationPractice` instance from gamepad input — A/B buttons turn the robot, d-pad left/right change its x-position — and displays heading/angle/x via telemetry. |
+| `LimelightBench.java` | Plain helper class that wraps a `Limelight3A` camera (mirrors `TestBench.java`) — init, per-loop `update()`, and getters for `hasTarget()`/`getTx()`/`getTy()`/`getTargetArea()`. |
+| `LimelightPractice.java` | `OpMode` that uses `LimelightBench` to display basic targeting telemetry — demonstrates composing an OpMode from the Limelight wrapper class. |
+| `LimelightAprilTagPractice.java` | `OpMode` that reads AprilTag/fiducial detections directly from a `Limelight3A`, displaying per-tag IDs/angles and the field-relative robot botpose. |
 
 ## Suggested reading order
 
@@ -26,3 +29,4 @@ Java practice programs for FTC (FIRST Tech Challenge) robotics, written against 
 5. `TestBench.java` → `touchSensorPractice.java`
 6. `RobotLocationPractice.java` → `UseRobotLocation.java`
 7. `ServosPractice.java`
+8. `LimelightBench.java` → `LimelightPractice.java` → `LimelightAprilTagPractice.java`
