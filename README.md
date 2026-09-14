@@ -19,6 +19,8 @@ Java practice programs for FTC (FIRST Tech Challenge) robotics, written against 
 | `LimelightBench.java` | Plain helper class that wraps a `Limelight3A` camera (mirrors `TestBench.java`) — init, per-loop `update()`, and getters for `hasTarget()`/`getTx()`/`getTy()`/`getTargetArea()`. |
 | `LimelightPractice.java` | `OpMode` that uses `LimelightBench` to display basic targeting telemetry — demonstrates composing an OpMode from the Limelight wrapper class. |
 | `LimelightAprilTagPractice.java` | `OpMode` that reads AprilTag/fiducial detections directly from a `Limelight3A`, displaying per-tag IDs/angles and the field-relative robot botpose. |
+| `LimelightAimPractice.java` | `OpMode` that auto-aims the drivetrain at a target using proportional control on `tx` while a bumper is held — a practical "auto-aim assist" pattern. |
+| `LimelightMegaTag2Practice.java` | `OpMode` that feeds IMU yaw into the Limelight each loop (`updateRobotOrientation`) and reads the gyro-assisted MegaTag2 botpose (`getBotpose_MT2`), plus tag-count/distance diagnostics. |
 
 ## Suggested reading order
 
@@ -29,4 +31,4 @@ Java practice programs for FTC (FIRST Tech Challenge) robotics, written against 
 5. `TestBench.java` → `touchSensorPractice.java`
 6. `RobotLocationPractice.java` → `UseRobotLocation.java`
 7. `ServosPractice.java`
-8. `LimelightBench.java` → `LimelightPractice.java` → `LimelightAprilTagPractice.java`
+8. `LimelightBench.java` → `LimelightPractice.java` → `LimelightAprilTagPractice.java` → `LimelightAimPractice.java` → `LimelightMegaTag2Practice.java`
