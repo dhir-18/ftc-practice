@@ -21,6 +21,9 @@ Java practice programs for FTC (FIRST Tech Challenge) robotics, written against 
 | `LimelightAprilTagPractice.java` | `OpMode` that reads AprilTag/fiducial detections directly from a `Limelight3A`, displaying per-tag IDs/angles and the field-relative robot botpose. |
 | `LimelightAimPractice.java` | `OpMode` that auto-aims the drivetrain at a target using proportional control on `tx` while a bumper is held — a practical "auto-aim assist" pattern. |
 | `LimelightMegaTag2Practice.java` | `OpMode` that feeds IMU yaw into the Limelight each loop (`updateRobotOrientation`) and reads the gyro-assisted MegaTag2 botpose (`getBotpose_MT2`), plus tag-count/distance diagnostics. |
+| `PedroPathingConstants.java` | Holds Pedro Pathing's `FollowerConstants` (translational/heading/drive PIDF coefficients) and a `createFollower(hardwareMap)` factory — the central place PIDF gains get tuned. |
+| `PedroPathingAutoPractice.java` | Autonomous `OpMode` that builds a one-segment path with `pathBuilder()`/`BezierLine` and follows it, reporting live pose via telemetry. |
+| `PIDFTunerPractice.java` | `TeleOp` that holds a fixed point with `activateAllPIDFs()`/`holdPoint()` so you can physically push the robot and watch the PIDF correct back — the mechanic behind Pedro Pathing's tuning OpModes. |
 
 ## Suggested reading order
 
@@ -32,3 +35,4 @@ Java practice programs for FTC (FIRST Tech Challenge) robotics, written against 
 6. `RobotLocationPractice.java` → `UseRobotLocation.java`
 7. `ServosPractice.java`
 8. `LimelightBench.java` → `LimelightPractice.java` → `LimelightAprilTagPractice.java` → `LimelightAimPractice.java` → `LimelightMegaTag2Practice.java`
+9. `PedroPathingConstants.java` → `PedroPathingAutoPractice.java` → `PIDFTunerPractice.java`
